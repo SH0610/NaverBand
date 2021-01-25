@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_home"
+        android:title="나의 활동"
+        android:icon="@drawable/icon_smallprofile"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_feed"
+        android:title="글쓰기"
+        android:icon="@drawable/icon_appbar_feed"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_notify"
+        android:title="새소식 관리"
+        android:icon="@drawable/icon_appbar_more"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_chat"
+        android:title="채팅"
+        android:icon="@drawable/icon_appbar_chat"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true"
+    tools:context=".src.login.emailphone.SignUpActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/signnum_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="20dp"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/signnum_close_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/icon_close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:paddingEnd="10dp"
+                android:text="회원 가입"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:id="@+id/signnum_title_txt" />
+
+            <Button
+                android:id="@+id/signnum_btn_next"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:background="#00FFFFFF"
+                android:textSize="15sp"
+                android:textColor="#1EC800"
+                android:text="다음" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/signnum_number_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@+id/signnum_toolbar"
+        android:textSize="10sp"
+        android:text="휴대폰 번호"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/signnum_number_et"
+        android:layout_below="@+id/signnum_number_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="phone"
+        android:textSize="25sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:hint="010-1234-5678" />
+
+    <TextView
+        android:id="@+id/signnum_pw_txt"
+        android:layout_below="@+id/signnum_number_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp"
+        android:text="비밀번호"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/signnum_pw_et"
+        android:layout_below="@id/signnum_pw_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="textPassword"
+        android:textSize="25sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:hint="영어, 숫자 포함 8~16자" />
+
+    <TextView
+        android:id="@+id/signnum_name_txt"
+        android:layout_below="@+id/signnum_pw_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="10sp"
+        android:text="이름"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/signnum_name_et"
+        android:layout_below="@id/signnum_name_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="text"
+        android:textSize="25sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:hint="안상희" />
+
+    <TextView
+        android:id="@+id/signnum_birth_txt"
+        android:layout_below="@+id/signnum_name_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="10sp"
+        android:text="생년월일"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/signnum_birth_et"
+        android:layout_below="@id/signnum_birth_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="5dp"
+        android:hint="1997-06-10"
+        android:inputType="phone"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/signnum_email_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        android:text="또는 이메일 가입"
+        android:textSize="12sp"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/signnum_phone_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        android:text="또는 휴대폰 번호로 가입"
+        android:textSize="12sp"
+        android:textColor="@android:color/black"
+        android:visibility="invisible"/>
+</RelativeLayout>

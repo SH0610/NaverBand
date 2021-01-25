@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".src.login.RegisterActivity">
+
+    <TextView
+        android:paddingVertical="20dp"
+        android:gravity="center"
+        android:id="@+id/register_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="프로필 작성"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/register_profile_img"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/icon_profile" />
+
+    <TextView
+        android:id="@+id/register_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="안상희"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="15sp"
+        android:text="생년월일" />
+
+    <EditText
+        android:id="@+id/register_birth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="phone"
+        android:textSize="25sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:hint="ex) 1997-06-10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="성별" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:checkedButton="@+id/rared"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/register_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="남자"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/register_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="여자"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="15sp"
+        android:text="휴대폰 번호" />
+
+    <LinearLayout
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:text="+82" />
+
+        <EditText
+            android:id="@+id/register_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="20dp"
+            android:inputType="phone"
+            android:textSize="25sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:hint="ex) 010-5125-7002" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="15sp"
+        android:text="비밀번호" />
+
+    <EditText
+        android:id="@+id/register_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="15sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:hint="영어 대소문자, 숫자만 입력 가능 (8~16자)"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/already_btn_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:text="완료" />
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/search_root"
+    android:background="#FFFFFF"
+    android:layout_margin="15dp" >
+
+    <EditText
+        android:id="@+id/chatTab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingStart="5dp"
+        android:drawableStart="@drawable/icon_search"
+        android:background="@drawable/border_round"
+        android:textSize="15sp"
+        android:hint="채팅방, 대화내용 검색"
+        android:inputType="textNoSuggestions" />
+
+</LinearLayout>

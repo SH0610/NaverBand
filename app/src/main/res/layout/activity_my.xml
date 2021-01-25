@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F2F4"
+    android:orientation="vertical"
+    tools:context=".src.main.my.MyActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mytoolbar"
+        app:titleTextColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        app:title="나의 활동"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/more_myactivity"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/myactivity_btn_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:id="@+id/more_layout_profileImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/more_img_profile"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/img_profile" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/more_layout_profileText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/more_layout_profileImage"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/more_txt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:text="상희"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="프로필 설정"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/myactivity_user_listone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:clickable="true"
+                android:focusable="true" >
+
+                <LinearLayout
+                    android:id="@+id/mypage_article"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="내가 쓴 글"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_marginBottom="15dp"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="8개 밴드 활동 중"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end|center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_arrow" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F1F2F4"/>
+
+            <RelativeLayout
+                android:id="@+id/myactivity_user_listtwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true" >
+                <TextView
+                    android:id="@+id/mypage_bookmark"
+                    android:layout_marginVertical="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="북마크"
+                    android:textColor="@android:color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                <TextView
+                    android:id="@+id/mypage_bookmark_count"
+                    android:layout_marginVertical="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/img_listtwo"
+                    android:textSize="16sp"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <ImageView
+                    android:id="@+id/img_listtwo"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end|center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_arrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F1F2F4"/>
+
+            <RelativeLayout
+                android:id="@+id/myactivity_user_listthree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true" >
+                <TextView
+                    android:id="@+id/mypage_schedule"
+                    android:layout_marginVertical="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="다가오는 일정"
+                    android:textColor="@android:color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                <TextView
+                    android:id="@+id/mypage_schedule_count"
+                    android:layout_marginVertical="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/img_listthree"
+                    android:textSize="16sp"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <ImageView
+                    android:id="@+id/img_listthree"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end|center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_arrow" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

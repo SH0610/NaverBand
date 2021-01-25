@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    tools:ignore="RtlSymmetry">
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:clickable="true"
+                android:id="@+id/page_profile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/img_sample" />
+
+            <LinearLayout
+                android:id="@+id/page_btn_profile"
+                android:clickable="true"
+                android:layout_toEndOf="@+id/page_profile"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/page_txt_writer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="안상희"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <TextView
+                    android:id="@+id/page_txt_date"
+                    android:layout_marginVertical="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="2020년 9월 3일 오후 3:51" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/page_btn_more"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/icon_dots"
+                android:layout_alignParentEnd="true"
+                app:tint="@android:color/darker_gray" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/page_btn_content"
+            android:clickable="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/page_txt_content"
+                android:layout_marginVertical="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="글 내용"
+                android:textSize="16sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/page_txt_mood"
+                android:layout_marginVertical="5dp"
+                android:layout_below="@+id/page_txt_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="표정" />
+
+            <TextView
+                android:id="@+id/page_txt_moodcount"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/page_txt_mood"
+                android:layout_alignBottom="@+id/page_txt_mood"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:text="5" />
+
+
+            <TextView
+                android:id="@+id/page_txt_comment"
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/page_txt_moodcount"
+                android:layout_alignBottom="@+id/page_txt_mood"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="댓글" />
+
+            <TextView
+                android:id="@+id/page_txt_commentcount"
+                android:layout_marginHorizontal="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/page_txt_comment"
+                android:layout_alignBottom="@+id/page_txt_comment"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:text="5" />
+
+            <ImageView
+                android:layout_toStartOf="@id/page_txt_views"
+                android:layout_alignBottom="@+id/page_txt_comment"
+                android:layout_marginBottom="6dp"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/icon_img_view" />
+
+            <TextView
+                android:id="@+id/page_txt_views"
+                android:layout_alignBottom="@+id/page_txt_comment"
+                android:layout_alignParentEnd="true"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:textSize="12sp"
+                android:text="5" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F1F2F4"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/page_btn_emoticon"
+                android:paddingVertical="15dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:id="@+id/page_img_emoticon"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/icon_feed_emoticon" />
+                <TextView
+                    android:id="@+id/page_txt_emoticon"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:text="표정짓기" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/page_btn_comment"
+                android:paddingVertical="15dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/icon_feed_comment" />
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:text="댓글쓰기" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F1F2F4"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="@android:color/white"
+        android:id="@+id/comment_view"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:clickable="true"
+            android:id="@+id/comment_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/img_sample" />
+
+        <LinearLayout
+            android:id="@+id/comment_btn_profile"
+            android:clickable="true"
+            android:layout_toEndOf="@+id/comment_profile"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/comment_txt_writer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="댓글 쓴 사람"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/comment_content"
+                android:layout_marginVertical="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="댓글 내용" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/comment_txt_date"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/icon_dots"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="9월 3일 오후 3:51"
+            app:tint="@android:color/darker_gray" />
+    </RelativeLayout>
+
+</LinearLayout>

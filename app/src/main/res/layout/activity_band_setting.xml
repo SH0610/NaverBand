@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F2F4"
+    tools:context=".src.pageband.BandSettingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_page_setting"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1EC800"
+        app:titleTextColor="@android:color/white"
+        app:title="채팅"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="20dp"
+            android:layout_gravity="center"
+            tools:ignore="RtlSymmetry">
+
+            <Button
+                android:id="@+id/page_setting_close"
+                android:clickable="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/page_back" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/page_setting_close"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="내 설정"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:id="@+id/page_setting" />
+
+                <TextView
+                    android:id="@+id/page_setting_bandname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"
+                    android:text="밴드 이름"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar_page_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/setting1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:text="내 설정" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/setting2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setting1"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/pagesetting_list1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="이 밴드 프로필 설정"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="생일: 비공개, 휴대폰 번호: 비공개"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/pagesetting_layout_profileImage"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/page_setting_img"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginEnd="25dp"
+                            android:src="@drawable/img_profile" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F2F4"/>
+
+                <RelativeLayout
+                    android:id="@+id/pagesetting_list2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true" >
+                    <TextView
+                        android:layout_marginVertical="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="내 온라인 상태 표시"
+                        android:textColor="@android:color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F2F4"/>
+
+                <RelativeLayout
+                    android:id="@+id/pagesetting_list3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="채팅 바로 받기"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_marginBottom="15dp"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:text="채팅 요청을 수락한 뒤 메시지를 수신합니다."
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F2F4"/>
+
+                <RelativeLayout
+                    android:id="@+id/pagesetting_list4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="초대 허용"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_marginBottom="15dp"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:text="멤버들이 나를 다른 밴드로 초대할 수 있습니다."
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/alarm"
+                android:layout_below="@+id/setting2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:text="푸시알림" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/setting3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alarm"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+
+                <RelativeLayout
+                    android:id="@+id/pagesetting_list5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true" >
+                    <TextView
+                        android:layout_marginVertical="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="푸시알림 받기"
+                        android:textColor="@android:color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F2F4"/>
+
+                <RelativeLayout
+                    android:id="@+id/pagesetting_list6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="채팅 푸시알림"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_marginBottom="15dp"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:text="참여하고 있는 채팅방별 푸시알림을 설정하세요."
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end|center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_arrow" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/newapp"
+                android:layout_below="@+id/setting3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:text="앱 내 새소식" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/setting4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newapp"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+
+                <RelativeLayout
+                    android:id="@+id/pagesetting_list7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true" >
+                    <TextView
+                        android:layout_marginVertical="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="새소식 받기"
+                        android:textColor="@android:color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <TextView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="#1EC800"
+                        android:text="참여댓글만" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/emailalarm"
+                android:layout_below="@+id/setting4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:text="이메일 알림" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/setting5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailalarm"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+
+                <RelativeLayout
+                    android:id="@+id/pagesetting_list8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true" >
+                    <TextView
+                        android:layout_marginVertical="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="이메일 알림"
+                        android:textColor="@android:color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end|center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_arrow" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bandmenusetting"
+                android:layout_below="@+id/setting4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:text="밴드 메뉴 관리" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/setting6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bandmenusetting"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+
+                <RelativeLayout
+                    android:id="@+id/pagesetting_list9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true" >
+                    <TextView
+                        android:layout_marginVertical="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="밴드북 / 사진인화"
+                        android:textColor="@android:color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end|center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_arrow" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F2F4"/>
+
+                <RelativeLayout
+                    android:id="@+id/pagesetting_list10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true" >
+                    <TextView
+                        android:layout_marginVertical="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="바로가기 아이콘 추가"
+                        android:textColor="@android:color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end|center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_arrow" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bandbye"
+                android:layout_below="@+id/setting6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#F1F2F4"/>
+
+
+            <LinearLayout
+                android:id="@+id/setting7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bandbye"
+                android:background="@android:color/white"
+                android:orientation="vertical" >
+
+
+                <RelativeLayout
+                    android:id="@+id/pagesetting_list11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true" >
+                    <TextView
+                        android:layout_marginVertical="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="밴드 탈퇴하기"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F2F4"/>
+
+                <RelativeLayout
+                    android:id="@+id/pagesetting_list12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="15dp"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true" >
+                    <TextView
+                        android:layout_marginVertical="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="밴드 신고하기"
+                        android:textColor="@android:color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:background="#F1F2F4"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
